@@ -156,4 +156,8 @@ export class FastifyAdapter {
   addHook(name: string, fn: Function) {
     this.instance.addHook(name, fn);
   }
+
+  after(afterListener: (err: Error, done: Function) => void) {
+    this.instance.after(afterListener);
+  }
 }
