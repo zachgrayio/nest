@@ -152,4 +152,8 @@ export class FastifyAdapter {
       });
     };
   }
+
+  addHook(name: string, fn: Function) {
+    this.instance.addHook(name, fn);
+  }
 }
